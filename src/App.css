@@ -28,18 +28,18 @@ h1 {
   color: #4a72ff;
   letter-spacing: 3px;
   background:none;
-  border-bottom:10px dashed #fd9153;
-  margin-bottom:25px;
 }
 
 h2 {
-  background: #D180F7;
+  background: #fd9153;
   border-radius:10px;
   border:10px solid #4a72ff;
 }
 
 h3 { 
-  background:none;
+  background:#f8cac1;
+  border-radius:10px;
+
 }
 
 @keyframes fadein {
