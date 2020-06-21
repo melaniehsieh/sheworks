@@ -2,6 +2,7 @@ import React from "react";
 
 export const About = () => (
   <div>
+    <div id="container">
     <h1>About sheworks</h1>
     <h3>Have you ever read Melinda Gates' book ~ Moment Of Lift?</h3>
     <p>
@@ -14,5 +15,6 @@ export const About = () => (
       thier unpaid labor each day? Reminding they too also have the right to
       improve themselves.
     </p>
+    </div>
   </div>
 );
