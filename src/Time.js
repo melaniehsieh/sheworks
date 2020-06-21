@@ -29,15 +29,10 @@ export default class Time extends React.Component {
         </div>
         <div>
           <h1>Weekly</h1>
-          <Stacked
-            width={this.state.width}
-            height={this.state.height}
-            marginT={this.state.marginT}
-            marginR={this.state.marginR}
-            marginB={this.state.marginB}
-            marginL={this.state.marginL}
-          />
-        </div>
+          <script src="components/Staked.js"></script>
+          <link rel="stylesheet" href="app.css"></link>
+          <div id="my_dataviz"></div>
+          </div>
       </div>
     );
   }
