@@ -27,6 +27,11 @@ h1 {
   font-weight: bold;
   color: #4a72ff;
   letter-spacing: 3px;
+  background:none;
+}
+
+h3 { 
+  background:none;
 }
 
 @keyframes fadein {
@@ -40,16 +45,22 @@ h1 {
 
 #container {
   display: inline-block;
+  margin:20px;
   border: 10px solid #4a72ff;
   border-radius: 10px;
   background: #fff;
-  width: 500px;
+  width: 575px;
   box-shadow: 10px 10px #2e2025;
 }
 
 #container h1,
 p {
   background: #fff;
+}
+
+#container img{
+  width:90%;
+  background:transparent;
 }
 
 #container:hover {
