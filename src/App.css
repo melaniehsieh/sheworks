@@ -16,6 +16,7 @@ body {
   text-align: center;
   letter-spacing: 1px;
   animation: fadein 2s;
+  text-transform: lowercase;
 }
 
 a {
@@ -121,4 +122,13 @@ p {
 .row {
   display: flex;
   flex-direction: row;
+  margin:100px;
+  border: 10px solid #4a72ff;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 10px 10px #2e2025;
+}
+
+.row:hover {
+  border: 10px solid #fd9153;
 }
