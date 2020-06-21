@@ -25,7 +25,7 @@ export default class Time extends React.Component {
           <h1>Weekly</h1>
           <Stacked />
         </div>
-        <div>
+        <div style={{ width: "100%" }}>
           <h1>Family Members</h1>
           <ul>
             <li style={{ background: "#2AB290" }}>Father</li>
