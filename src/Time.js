@@ -1,6 +1,7 @@
 import React from "react";
 import Donut from "./components/Donut";
 import "./App.css";
+import Stacked from "./components/Stacked";
 
 export default class Time extends React.Component {
   state = {
@@ -22,18 +23,17 @@ export default class Time extends React.Component {
         </div>
         <div>
           <h1>Weekly</h1>
-          <script src="components/Staked.js"></script>
-          <link rel="stylesheet" href="app.css"></link>
-          <div id="my_dataviz"></div>
+          <Stacked />
         </div>
         <div>
+          <h1>Family Members</h1>
           <ul>
             <li style={{ background: "#2AB290" }}>Father</li>
             <li style={{ background: "#F17B3C" }}>Mother</li>
             <li style={{ background: "#7B68B4" }}>Older Sister</li>
-            <li style={{ background: "#87B858" }}>Older Brother</li>
             <li style={{ background: "#FF3D96" }}>Younger Sister</li>
-            <li style={{ background: "#F4B644" }}>Younger Sister</li>
+            <li style={{ background: "#87B858" }}>Older Brother</li>
+            <li style={{ background: "#F4B644" }}>Younger Brother</li>
           </ul>
         </div>
       </div>
