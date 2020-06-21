@@ -21,22 +21,13 @@ class Donut extends Component {
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-    // const data = [
-    //   { id: "412563", time: 26.3 },
-    //   { id: "258963", time: 0.81 },
-    //   { id: "782369", time: 54.0 },
-    //   { id: "741236", time: 33.5 },
-    //   { id: "369852", time: 30.8 },
-    //   { id: "145236", time: 40.8 },
-    // ];
-
     const data = {
-      412563: 26.3,
-      258963: 0.81,
-      782369: 54.0,
-      741236: 33.5,
-      369852: 30.8,
-      145236: 40.8,
+      Father: 27,
+      Mother: 44,
+      Older_Sister: 24,
+      Younger_Sister: 10,
+      Older_Brother: 20,
+      Younger_Brother: 6,
     };
 
     var color = d3.scaleOrdinal().domain(data).range(d3.schemeDark2);

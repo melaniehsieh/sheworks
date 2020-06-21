@@ -1,18 +1,12 @@
 import React from "react";
 import Donut from "./components/Donut";
-import Stacked from "./components/Staked";
 import "./App.css";
-import DonutData from "./components/csv/DonutData.csv";
 
 export default class Time extends React.Component {
   state = {
     width: 450,
     height: 500,
     margin: 40,
-    marginT: 40,
-    marginR: 40,
-    marginB: 40,
-    marginL: 40,
   };
 
   render() {
@@ -21,7 +15,6 @@ export default class Time extends React.Component {
         <div>
           <h1>Daily</h1>
           <Donut
-            data={this.state.data}
             width={this.state.width}
             height={this.state.height}
             margin={this.state.margin}
@@ -32,7 +25,17 @@ export default class Time extends React.Component {
           <script src="components/Staked.js"></script>
           <link rel="stylesheet" href="app.css"></link>
           <div id="my_dataviz"></div>
-          </div>
+        </div>
+        <div>
+          <ul>
+            <li style={{ background: "#2AB290" }}>Father</li>
+            <li style={{ background: "#F17B3C" }}>Mother</li>
+            <li style={{ background: "#7B68B4" }}>Older Sister</li>
+            <li style={{ background: "#87B858" }}>Older Brother</li>
+            <li style={{ background: "#FF3D96" }}>Younger Sister</li>
+            <li style={{ background: "#F4B644" }}>Younger Sister</li>
+          </ul>
+        </div>
       </div>
     );
   }
