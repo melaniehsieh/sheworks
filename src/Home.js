@@ -10,7 +10,10 @@ export const Home = () => (
         sheworks is a web app that allows women to track their time spent on
         domestic labor.
       </p>
+      <button onclick="/login" class="btn btn-primary">Login</button>
+
     </div>
+
 
     <div id="container">
     <img src="/6.png"></img>
