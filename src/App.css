@@ -42,7 +42,7 @@ h1 {
   box-shadow: 10px 10px #2e2025;
 }
 
-#container h1,p{
+#container h1, #container p{
   background:#fff;
 }
 

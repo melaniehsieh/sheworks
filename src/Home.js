@@ -6,9 +6,11 @@ export const Home = () => (
     <div id="navbar">
     <ul>
     <h1>sheworks</h1>
-  <li><a href="/home">home</a></li>
+  <li><a href="/">home</a></li>
   <li><a href="/about">about</a></li>
   <li><a href="/time">time</a></li>
+  <li><a href="/family">family</a></li>
+  <li><a href="/login">login</a></li>
     </ul>
     </div>
     
