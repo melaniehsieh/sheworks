@@ -28,6 +28,14 @@ h1 {
   color: #4a72ff;
   letter-spacing: 3px;
   background:none;
+  border-bottom:10px dashed #fd9153;
+  margin-bottom:25px;
+}
+
+h2 {
+  background: #D180F7;
+  border-radius:10px;
+  border:10px solid #4a72ff;
 }
 
 h3 { 
@@ -53,8 +61,7 @@ h3 {
   box-shadow: 10px 10px #2e2025;
 }
 
-#container h1,
-p {
+#container p {
   background: #fff;
 }
 
@@ -79,10 +86,12 @@ p {
 }
 
 #navbar h1 {
-  background: white;
-  padding: 10px;
+  background: #f8cac1;
+  border-radius:10px;
+  padding: 5px;
   text-align: left;
   display: inline-block;
+  border:none;
 }
 
 #navbar li {
