@@ -15,27 +15,24 @@ class Stacked extends Component {
     const marginL = this.props.marginL;
     
 
-    var svg = d3
-      .select("#stacked1")
+    var svg = d3.select("#stacked")
       .append("svg")
       .attr("width", width + marginL + marginR)
       .attr("height", height + marginT + marginB)
       .append("g")
       .attr("transform", "translate(" + marginL + "," + marginT + ")");
 
-    d3.csv("stacked.csv").then(function (data) {
+    d3.csv("https://raw.githubusercontent.com/melaniehsieh/sheworks/master/src/components/stacked.csv", function(data) {
         // group the data: I want to draw one line per group
         var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
           .key(function (d) {return d.id;})
           .entries(data);
 
+        
         // Add X axis --> it is a date format
         var x = d3
-          .scaleTime()
-          .domain(
-            d3.extent(data, function (d) {
-              return d.Day;
-            })
+          .scaleLinear()
+          .domain(d3.extent(data, function(d) { return d.days; })
           )
           .range([0, width]);
         svg
@@ -56,9 +53,8 @@ class Stacked extends Component {
         svg.append("g").call(d3.axisLeft(y));
 
         // color palette
-        var res = sumstat.map(function (d) {
-          return d.key;
-        }); // list of group names
+      
+        var res = sumstat.map(function (d) {return d.key;}); // list of group names
         var color = d3
           .scaleOrdinal()
           .domain(res)
@@ -69,9 +65,6 @@ class Stacked extends Component {
             "#984ea3",
             "#ff7f00",
             "#ffff33",
-            "#a65628",
-            "#f781bf",
-            "#999999",
           ]);
 
         // Draw the line
@@ -80,27 +73,20 @@ class Stacked extends Component {
           .data(sumstat)
           .enter()
           .append("path")
-          .attr("fill", "none")
-          .attr("stroke", function (d) {
-            return color(d.key);
-          })
+          .attr("fill", "none") //CHANGE FILL LATER
+          .attr("stroke", function (d) {return color(d.key);})
           .attr("stroke-width", 1.5)
           .attr("d", function (d) {
-            return d3
-              .line()
-              .x(function (d) {
-                return x(d.Day);
-              })
-              .y(function (d) {
-                return y(+d.Hours);
-              })(d.values);
+            return d3.line()
+              .x(function (d) {return x(d.days);})
+              .y(function (d) {return y(+d.Hours);});
           });
       }
     );
   }
 
   render() {
-    return <div id="stacked1"></div>;
+    return <div id="stacked"></div>;
   }
 }
 
