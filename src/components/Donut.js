@@ -95,7 +95,7 @@ class Donut extends Component {
       .enter()
       .append("text")
       .text((d) => {
-        return d.data.key + d.data.value;
+        return d.data.value;
       })
       .attr("transform", function (d) {
         var pos = outerArc.centroid(d);
